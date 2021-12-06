@@ -26,18 +26,18 @@
         android:textSize="30dp"/>
 
     <Button
-        android:id="@+id/stud_init_button1"
+        android:id="@+id/btn_class1"
         android:layout_width="318dp"
         android:layout_marginTop="50dp"
         android:layout_height="wrap_content"
-        android:text="@string/student_initial_button1" />
+        android:text="수업1" />
 
     <Button
-        android:id="@+id/stud_init_button2"
+        android:id="@+id/btn_class2"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_marginTop="50dp"
         android:layout_width="318dp"
-        android:text="@string/student_initial_button2" />
+        android:text="수업2" />
 
 
 </LinearLayout>

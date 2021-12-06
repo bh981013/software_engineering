@@ -14,12 +14,13 @@ public class RegisterRequest extends StringRequest{
     private Map<String, String> map;
     //private Map<String, String>parameters;
 
-    public RegisterRequest(String userID, String userPassword, Response.Listener<String> listener) {
+    public RegisterRequest(String userID, String userPassword, int userType, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
 
         map = new HashMap<>();
         map.put("userID", userID);
         map.put("userPassword", userPassword);
+        map.put("userType", Integer.toString(userType));
     }
 
     @Override

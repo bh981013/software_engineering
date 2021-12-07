@@ -14,8 +14,7 @@ public class ManagerFunc extends AppCompatActivity {
     private ArrayList<String> classes = new ArrayList<>();
     private ArrayList<Integer> classesID = new ArrayList<>();
     private String curClass, userID;
-
-
+    
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manager_func);
@@ -31,7 +30,7 @@ public class ManagerFunc extends AppCompatActivity {
         tv_class.setText( curClass);
 
         Button add_student = findViewById(R.id.manager_func_button1);
-        Button modify_calendar = findViewById(R.id.manager_func_button1);
+        Button modify_calendar = findViewById(R.id.manager_func_button2);
         Button add_bulletin = findViewById(R.id.manager_func_button3);
 
         Button delete_class = findViewById(R.id.delete_class);
@@ -92,8 +91,7 @@ public class ManagerFunc extends AppCompatActivity {
                 intent.putExtra("curClass", curClass);
                 startActivity(intent);
             }
-        });;
-
+        });
 
     }
 }

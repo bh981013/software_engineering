@@ -22,12 +22,14 @@ public class ManagerAddClass extends AppCompatActivity {
     private EditText new_class_name;
     private Button btn_add_class;
     private ArrayList<String> classes = new ArrayList<>();
+    private ArrayList<Integer> classesID = new ArrayList<>();
  protected void onCreate(Bundle savedInstanceState){
         super.onCreate( savedInstanceState );
         setContentView(R.layout.manager_add_class);
         new_class_name = findViewById(R.id.new_class);
         btn_add_class = findViewById(R.id.add_class);
         classes = getIntent().getStringArrayListExtra("classes");
+        classesID = getIntent().getIntegerArrayListExtra("classesID");
         btn_add_class.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -39,12 +41,17 @@ public class ManagerAddClass extends AppCompatActivity {
                             System.out.println("res: " + response);
                             JSONObject jsonObject = new JSONObject(response);
                             boolean success = jsonObject.getBoolean( "success" );
+
                             if (success){
+                                JSONObject jsonObject1 = jsonObject.getJSONObject("lectureID");
                                 Toast.makeText(getApplicationContext(), "수업추가 성공", Toast.LENGTH_SHORT).show();
                                 classes.add(className);
+                                classesID.add(jsonObject1.getInt("lectureID"));
+                                System.out.println("classesID: " + classesID);
                                 Intent intent = new Intent(getApplicationContext(), ManagerInit.class);
                                 intent.putExtra("userID", userID);
                                 intent.putExtra("classes", classes);
+                                intent.putExtra("classesID", classesID);
                                 startActivity(intent);
                             }
                             else{

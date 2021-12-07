@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Student_attendance extends RecyclerView.Adapter<calendar_header>{
+public class Student_attendance extends RecyclerView.Adapter<calendar_header> {
     private final ArrayList<String> daysOfMonth;
     private final OnitemListener onitemListener;
 

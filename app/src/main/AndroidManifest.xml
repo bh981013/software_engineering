@@ -24,6 +24,10 @@
         <activity android:name=".ManagerInit"></activity>
         <activity android:name=".ManagerAddClass"></activity>
         <activity android:name=".ManagerFunc"></activity>
+        <activity android:name=".ManagerAddStudent"></activity>
+        <activity android:name=".ManagerDeleteClass"></activity>
+        <activity android:name=".ManagerAddBulletin"></activity>
+        <activity android:name=".ManagerCheckAttendance"></activity>
     </application>
 
 </manifest>

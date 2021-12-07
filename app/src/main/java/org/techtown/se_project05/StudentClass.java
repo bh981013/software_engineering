@@ -2,6 +2,8 @@ package org.techtown.se_project05;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -14,6 +16,7 @@ public class StudentClass extends AppCompatActivity {
     private TextView tv_id;
     private Button btn_class1, btn_class2;
     private ArrayList<String> classes;
+    private ArrayList<Integer> classesID;
     LinearLayout linear1;
     protected  void onCreate(Bundle savedInstanceState){
         super.onCreate( savedInstanceState );
@@ -24,17 +27,39 @@ public class StudentClass extends AppCompatActivity {
         Intent intent = getIntent();
         String userID = intent.getStringExtra("userID");
         classes = intent.getStringArrayListExtra("classes");
+        classesID = intent.getIntegerArrayListExtra("classesID");
         tv_id.setText(userID);
 
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+        lp.gravity = Gravity.CENTER;
+        if (classes.size() == 0){
+            TextView textView = new TextView(this);
+            textView.setText("수업이 존재하지 않습니다");
+            textView.setTextSize(30);
+            textView.setLayoutParams(lp);
+            linear1.addView(textView);
+        }
         for(int i = 0; i< classes.size(); i++){
-            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT);
+
             lp.width = 800;
             Button btn = new Button(this);
             btn.setLayoutParams(lp);
             btn.setText(classes.get(i));
             btn.setId(i);
+            final int num = i;
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent= new Intent(getApplicationContext(), ManagerFunc.class);
+                    intent.putExtra("userID", userID);
+                    intent.putExtra("classes", classes);
+                    intent.putExtra("classesID", classesID);
+                    intent.putExtra("curClass", classes.get(num));
+                    startActivity(intent);
+                }
+            });
             linear1.addView(btn);
         }
 

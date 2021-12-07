@@ -21,11 +21,12 @@ public class ManagerCheckAttendance extends AppCompatActivity {
     Calendar cal = Calendar.getInstance();
     private Button button;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manager_check_attendance);
-        button =(Button) findViewById(R.id.button_id);
+        button = findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -33,6 +34,7 @@ public class ManagerCheckAttendance extends AppCompatActivity {
                 openManagerSelectAttendance();
             }
         });
+
         customCalendar = findViewById(R.id.customcalender);
         HashMap<Object, Property> hashMap = new HashMap<>();
 
@@ -70,10 +72,11 @@ public class ManagerCheckAttendance extends AppCompatActivity {
         dateMap.put(4,"present");
 
         customCalendar.setDate(calendar, dateMap);
+
+
     }
     public void openManagerSelectAttendance(){
         Intent intent = new Intent(this, ManagerSelectAttendance.class);
         startActivity(intent);
     }
-
 }

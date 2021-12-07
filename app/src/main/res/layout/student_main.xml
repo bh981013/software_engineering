@@ -39,5 +39,12 @@
         android:layout_width="318dp"
         android:text="@string/student_initial_button2" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="로그아웃" />
+
 
 </LinearLayout>

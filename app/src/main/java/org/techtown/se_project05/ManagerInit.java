@@ -25,6 +25,7 @@ public class ManagerInit extends AppCompatActivity{
     private TextView tv_id;
     private Button add_class, log_out;
     private ArrayList<String> classes = new ArrayList<>();
+    private ArrayList<Integer> classesID = new ArrayList<>();
     LinearLayout linear1;
 
     @Override
@@ -37,12 +38,8 @@ public class ManagerInit extends AppCompatActivity{
         Intent intent = getIntent();
         String userID = intent.getStringExtra("userID");
         classes = intent.getStringArrayListExtra("classes");
-        for(String c:classes){
-            System.out.println(c);
-        }
-
+        classesID = intent.getIntegerArrayListExtra("classesID");
         tv_id.setText(userID);          //id를 표시
-        System.out.println("size"+ classes.size());
 
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -62,6 +59,18 @@ public class ManagerInit extends AppCompatActivity{
             btn.setLayoutParams(lp);
             btn.setText(classes.get(i));
             btn.setId(i);
+            final int num = i;
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent= new Intent(getApplicationContext(), ManagerFunc.class);
+                    intent.putExtra("userID", userID);
+                    intent.putExtra("classes", classes);
+                    intent.putExtra("classesID", classesID);
+                    intent.putExtra("curClass", classes.get(num));
+                    startActivity(intent);
+                }
+            });
             linear1.addView(btn);
         }
         add_class = findViewById(R.id.add_class);

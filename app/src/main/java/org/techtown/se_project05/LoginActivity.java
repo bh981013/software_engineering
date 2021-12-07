@@ -26,13 +26,13 @@ public class LoginActivity extends AppCompatActivity {
     private Button btn_login, btn_register;
     private RadioGroup radioGroup;
     private ArrayList<String> classes = new ArrayList<>();
+    private ArrayList<Integer> classesID = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_login );
-        final boolean[] checked = {false};
-        String type = "";
+
         et_id = findViewById( R.id.et_id );
         et_pass = findViewById( R.id.et_pass );
         radioGroup = findViewById(R.id.radioGroup);
@@ -64,19 +64,26 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         try {
                             //Toast.makeText( getApplicationContext(), "로그인 시도중", Toast.LENGTH_SHORT ).show();
+                            System.out.println("res: " + response);
 
                             JSONObject jsonObject = new JSONObject( response );
+
                             boolean success = jsonObject.getBoolean( "success" );
                             if(!jsonObject.has("userID") || !jsonObject.has("userPassword")) {
                                 Toast.makeText(getApplicationContext(), "존재하지 않는 ID/PW", Toast.LENGTH_SHORT).show();
                                 return;
                             }
+                            classes.clear();
+                            classesID.clear();
                             JSONArray jsonArray= jsonObject.getJSONArray("classes");
+                            System.out.println(jsonArray);
                             if (jsonArray.length() != 0) {
                                 for (int i = 0; i < jsonArray.length(); i++) {
-                                    String temp = jsonArray.get(i).toString();
-                                    System.out.println("t"+ temp);
-                                    classes.add(temp.substring(2,temp.length()-2));
+                                    JSONArray arr = (JSONArray) jsonArray.get(i);
+                                    System.out.println("t1: "+ arr.get(0));
+                                    System.out.println("t2: "+ arr.get(1));
+                                    classes.add(arr.get(0).toString());
+                                    classesID.add(Integer.parseInt(arr.get(1).toString()));
                                 }
                             }
 
@@ -98,6 +105,7 @@ public class LoginActivity extends AppCompatActivity {
                                 intent.putExtra( "userID", userID );
                                 intent.putExtra("type", userType);
                                 intent.putExtra("classes", classes);
+                                intent.putExtra("classesID", classesID);
                                 startActivity( intent );
 
                             } else {//로그인 실패시

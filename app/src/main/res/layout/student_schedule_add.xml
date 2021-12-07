@@ -21,10 +21,10 @@
         android:textColorHint="@color/input_register_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_mySchedule3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_stuBull_detail" />
 
     <Button
-        android:id="@+id/btn_schedule_check"
+        android:id="@+id/btn_stuBull_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
@@ -35,7 +35,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView_mySchedule3"
+        android:id="@+id/textView_stuBull_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="145dp"
@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sch_month_add" />
 
     <Button
-        android:id="@+id/btn_schedule_undo"
+        android:id="@+id/btn_stuBull_detail_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="36dp"

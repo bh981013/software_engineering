@@ -13,7 +13,17 @@
         android:theme="@style/Theme.SE_project05"
         android:usesCleartextTraffic="true">
         <activity
+<<<<<<< Updated upstream
+            android:name=".StudentBulletin_Detail"
+            android:exported="false" />
+        <activity
+            android:name=".StudentBulletin"
+            android:exported="false" />
+        <activity
             android:name=".Student_schedule_add"
+=======
+            android:name=".Student_attendance_add"
+>>>>>>> Stashed changes
             android:exported="false" />
         <activity
             android:name=".Student_schedule"

@@ -25,9 +25,9 @@ public class Student_schedule_add extends AppCompatActivity {
         sch_month = (Spinner)findViewById(R.id.sch_month_add);
         sch_day = (Spinner)findViewById(R.id.sch_day_add);
 
-        btn_add = findViewById(R.id.btn_schedule_check);
+        btn_add = findViewById(R.id.btn_stuBull_details);
 
-        btn_back = findViewById(R.id.btn_schedule_undo);
+        btn_back = findViewById(R.id.btn_stuBull_detail_back);
         btn_back.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Student_schedule.class);

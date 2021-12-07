@@ -6,50 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".Student_schedule">
 
-    <Button
-        android:id="@+id/btn_schedule_look"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="16dp"
-        android:text="자세히"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_schedule_back"
-        app:layout_constraintStart_toEndOf="@+id/btn_schedule_add" />
+    <EditText
+        android:id="@+id/et_schedule_name"
+        android:layout_width="366dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="22dp"
+        android:background="@color/input_register_bg"
+        android:hint="@string/hint_schedule_name"
+        android:inputType="textCapWords"
+        android:padding="10dp"
+        android:textColor="@color/input_register"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_mySchedule3" />
 
     <Button
-        android:id="@+id/btn_schedule_add"
+        android:id="@+id/btn_schedule_check"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
         android:layout_marginBottom="16dp"
-        android:text="추가"
+        android:text="확인"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_schedule"
-        android:layout_width="338dp"
-        android:layout_height="405dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="53dp"
-        android:scrollbarFadeDuration="0"
-        android:scrollbarSize="5dp"
-        android:scrollbarThumbVertical="@android:color/darker_gray"
-        android:scrollbars="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btn_schedule_back"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_stuBull_detail" />
-
     <TextView
-        android:id="@+id/textView_stuBull_detail"
+        android:id="@+id/textView_mySchedule3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="145dp"
@@ -63,12 +49,12 @@
         app:layout_constraintTop_toBottomOf="@+id/sch_month_add" />
 
     <Button
-        android:id="@+id/btn_schedule_back"
+        android:id="@+id/btn_schedule_undo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="16dp"
-        android:text="뒤로"
+        android:text="취소"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -137,6 +123,5 @@
         app:layout_constraintEnd_toStartOf="@+id/sch_month_add"
         app:layout_constraintStart_toEndOf="@+id/sch_year_add"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

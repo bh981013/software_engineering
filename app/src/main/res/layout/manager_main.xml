@@ -40,6 +40,14 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/add_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_weight="1"
+            android:text="수업추가" />
+
+        <Button
             android:id="@+id/log_out"
             android:layout_marginHorizontal="40dp"
             android:layout_width="wrap_content"

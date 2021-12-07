@@ -19,8 +19,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".Student_class"></activity>
+        <activity android:name=".StudentInit"></activity>
+        <activity android:name=".StudentClass"></activity>
+        <activity android:name=".ManagerInit"></activity>
+        <activity android:name=".ManagerAddClass"></activity>
     </application>
 
 </manifest>

@@ -14,7 +14,7 @@ public class ManagerFunc extends AppCompatActivity {
     private ArrayList<String> classes = new ArrayList<>();
     private ArrayList<Integer> classesID = new ArrayList<>();
     private String curClass, userID;
-    
+    private int curClassID;
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manager_func);
@@ -23,7 +23,7 @@ public class ManagerFunc extends AppCompatActivity {
         classes = intent.getStringArrayListExtra("classes");
         classesID = intent.getIntegerArrayListExtra("classesID");
         curClass = intent.getStringExtra("curClass");
-
+        curClassID = intent.getIntExtra("curClassID", 1);
         TextView tv_id = findViewById(R.id.tv_id);
         TextView tv_class = findViewById(R.id.tv_class);
         tv_id.setText("관리자 ID: " + userID);
@@ -43,6 +43,7 @@ public class ManagerFunc extends AppCompatActivity {
                 intent.putExtra("classes", classes);
                 intent.putExtra("classesID", classesID);
                 intent.putExtra("curClass", curClass);
+                intent.putExtra("curClassID", curClassID);
                 startActivity(intent);
 
             }

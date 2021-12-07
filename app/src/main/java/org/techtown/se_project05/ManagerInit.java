@@ -1,6 +1,5 @@
 package org.techtown.se_project05;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -10,14 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -68,6 +59,7 @@ public class ManagerInit extends AppCompatActivity{
                     intent.putExtra("classes", classes);
                     intent.putExtra("classesID", classesID);
                     intent.putExtra("curClass", classes.get(num));
+                    intent.putExtra("curClassID", classesID.get(num));
                     startActivity(intent);
                 }
             });

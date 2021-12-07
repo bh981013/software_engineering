@@ -27,7 +27,7 @@
 
 
     <EditText
-        android:id="@+id/new_class"
+        android:id="@+id/new_stud_id"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -58,7 +58,6 @@
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
             android:text="추가" />
-
         <Button
             android:id="@+id/delete_student"
             android:layout_marginHorizontal="5dp"
@@ -67,6 +66,5 @@
             android:layout_weight="1"
             android:text="삭제" />
     </LinearLayout>
-
 
 </LinearLayout>

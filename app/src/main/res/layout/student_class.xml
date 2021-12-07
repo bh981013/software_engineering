@@ -25,19 +25,28 @@
         android:gravity="center"
         android:textSize="30dp"/>
 
-    <Button
-        android:id="@+id/btn_class1"
-        android:layout_width="318dp"
-        android:layout_marginTop="50dp"
-        android:layout_height="wrap_content"
-        android:text="수업1" />
+    <LinearLayout
+        android:id = "@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="406dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_class2"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_width="318dp"
-        android:text="수업2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/log_out"
+            android:layout_marginHorizontal="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="로그아웃" />
+    </LinearLayout>
 
 
 </LinearLayout>

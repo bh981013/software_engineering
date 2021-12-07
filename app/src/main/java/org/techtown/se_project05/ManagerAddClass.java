@@ -16,15 +16,18 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 public class ManagerAddClass extends AppCompatActivity {
     private EditText new_class_name;
     private Button btn_add_class;
-    protected void onCreate(Bundle savedInstanceState){
+    private ArrayList<String> classes = new ArrayList<>();
+ protected void onCreate(Bundle savedInstanceState){
         super.onCreate( savedInstanceState );
         setContentView(R.layout.manager_add_class);
         new_class_name = findViewById(R.id.new_class);
         btn_add_class = findViewById(R.id.add_class);
-
+        classes = getIntent().getStringArrayListExtra("classes");
         btn_add_class.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -38,9 +41,10 @@ public class ManagerAddClass extends AppCompatActivity {
                             boolean success = jsonObject.getBoolean( "success" );
                             if (success){
                                 Toast.makeText(getApplicationContext(), "수업추가 성공", Toast.LENGTH_SHORT).show();
+                                classes.add(className);
                                 Intent intent = new Intent(getApplicationContext(), ManagerInit.class);
                                 intent.putExtra("userID", userID);
-                                intent.putExtra("className", className);
+                                intent.putExtra("classes", classes);
                                 startActivity(intent);
                             }
                             else{

@@ -8,11 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class StudentInit extends AppCompatActivity {
 
     private TextView tv_id;
     private Button btn_class, btn_plan;
-
+    private ArrayList<String> classes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -24,7 +26,7 @@ public class StudentInit extends AppCompatActivity {
 
         Intent intent = getIntent();
         String userID = intent.getStringExtra("userID");
-
+        classes = intent.getStringArrayListExtra("classes");
         tv_id.setText(userID);
 
         btn_class = findViewById(R.id.stud_init_button1);
@@ -32,6 +34,7 @@ public class StudentInit extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StudentClass.class);
                 intent.putExtra("userID", userID);
+                intent.putExtra("classes", classes);
                 startActivity(intent);
             }
         });

@@ -32,14 +32,6 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/manager_class_button1"
-            android:layout_width="800px"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="수업1" />
-
-
     </LinearLayout>
 
     <LinearLayout

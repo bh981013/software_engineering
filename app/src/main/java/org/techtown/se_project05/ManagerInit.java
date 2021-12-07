@@ -71,6 +71,8 @@ public class ManagerInit extends AppCompatActivity{
                 Intent intent = new Intent(getApplicationContext(), ManagerAddClass.class);
                 intent.putExtra("userID", userID);
                 intent.putExtra("classes", classes);
+                intent.putExtra("classesID", classesID);
+                startActivity(intent);
                 startActivity(intent);
             }
 

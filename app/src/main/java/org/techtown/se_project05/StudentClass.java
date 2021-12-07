@@ -28,6 +28,8 @@ public class StudentClass extends AppCompatActivity {
         String userID = intent.getStringExtra("userID");
         classes = intent.getStringArrayListExtra("classes");
         classesID = intent.getIntegerArrayListExtra("classesID");
+        System.out.println("classes: " + classes);
+        System.out.println("classesID: " + classesID);
         tv_id.setText(userID);
 
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
@@ -52,11 +54,12 @@ public class StudentClass extends AppCompatActivity {
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent= new Intent(getApplicationContext(), ManagerFunc.class);
+                    Intent intent= new Intent(getApplicationContext(), StudentFunc.class);
                     intent.putExtra("userID", userID);
                     intent.putExtra("classes", classes);
                     intent.putExtra("classesID", classesID);
                     intent.putExtra("curClass", classes.get(num));
+                    intent.putExtra("curClassID", classesID.get(num));
                     startActivity(intent);
                 }
             });

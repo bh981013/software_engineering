@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -15,14 +14,19 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class LoginActivity extends AppCompatActivity {
 
     private EditText et_id, et_pass;
     private Button btn_login, btn_register;
     private RadioGroup radioGroup;
+    private ArrayList<String> classes = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -54,30 +58,46 @@ public class LoginActivity extends AppCompatActivity {
                 int userType = 1;
                 if(radioGroup.getCheckedRadioButtonId() == R.id.radioButton){
                     userType = 2;
-                    Toast.makeText( getApplicationContext(), "수업관리자", Toast.LENGTH_SHORT ).show();
-                }
-                else{
-                    Toast.makeText( getApplicationContext(), "학생", Toast.LENGTH_SHORT ).show();
                 }
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         try {
                             //Toast.makeText( getApplicationContext(), "로그인 시도중", Toast.LENGTH_SHORT ).show();
+
                             JSONObject jsonObject = new JSONObject( response );
                             boolean success = jsonObject.getBoolean( "success" );
+                            if(!jsonObject.has("userID") || !jsonObject.has("userPassword")) {
+                                Toast.makeText(getApplicationContext(), "존재하지 않는 ID/PW", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                            JSONArray jsonArray= jsonObject.getJSONArray("classes");
+                            if (jsonArray.length() != 0) {
+                                for (int i = 0; i < jsonArray.length(); i++) {
+                                    String temp = jsonArray.get(i).toString();
+                                    System.out.println("t"+ temp);
+                                    classes.add(temp.substring(2,temp.length()-2));
+                                }
+                            }
+
 
                             if(success) {//로그인 성공시
 
                                 String userID = jsonObject.getString( "userID" );
-                                String userPass = jsonObject.getString( "userPassword" );
                                 int userType = jsonObject.getInt("userType");
                                 Toast.makeText( getApplicationContext(), "로그인 성공", Toast.LENGTH_SHORT ).show();
-                                Intent intent = new Intent( LoginActivity.this, MainActivity.class );
+                                Class goClass;
+                                if(userType == 1) {
+                                        goClass = StudentInit.class;
+                                }
+                                else {
+                                        goClass = ManagerInit.class;
+                                }
+                                Intent intent = new Intent(LoginActivity.this, goClass);
+
                                 intent.putExtra( "userID", userID );
-
                                 intent.putExtra("type", userType);
-
+                                intent.putExtra("classes", classes);
                                 startActivity( intent );
 
                             } else {//로그인 실패시
@@ -90,6 +110,10 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 };
+                if (userID.matches("") || userPass.matches("")){
+                    Toast.makeText( getApplicationContext(), "ID/PW를 입력하세요", Toast.LENGTH_SHORT ).show();
+                    return;
+                }
                 LoginRequest loginRequest = new LoginRequest( userID, userPass, userType,responseListener );
                 RequestQueue queue = Volley.newRequestQueue( LoginActivity.this );
                 queue.add( loginRequest );

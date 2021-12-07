@@ -6,7 +6,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-public class Student_class extends AppCompatActivity {
+public class StudentClass extends AppCompatActivity {
     private TextView tv_id;
     private Button btn_class1, btn_class2;
     protected  void onCreate(Bundle savedInstanceState){

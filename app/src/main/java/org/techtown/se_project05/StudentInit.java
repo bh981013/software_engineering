@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class StudentInit extends AppCompatActivity {
 
     private TextView tv_id;
     private Button btn_class, btn_plan;
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.student_main);
 
 
         tv_id = findViewById(R.id.tv_id);
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         btn_class = findViewById(R.id.stud_init_button1);
         btn_class.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Student_class.class);
+                Intent intent = new Intent(getApplicationContext(), StudentClass.class);
                 intent.putExtra("userID", userID);
                 startActivity(intent);
             }

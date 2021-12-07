@@ -23,6 +23,7 @@
         <activity android:name=".StudentClass"></activity>
         <activity android:name=".ManagerInit"></activity>
         <activity android:name=".ManagerAddClass"></activity>
+        <activity android:name=".ManagerFunc"></activity>
     </application>
 
 </manifest>

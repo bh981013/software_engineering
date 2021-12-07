@@ -9,7 +9,7 @@ import android.widget.Spinner;
 public class Student_schedule extends AppCompatActivity {
 
     private Spinner sch_year,sch_month,sch_day;
-    private Button btn_schedule_check,btn_schedule_undo;
+    private Button btn_schedule_add,btn_schedule_back,btn_schedule_look;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

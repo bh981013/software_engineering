@@ -24,8 +24,6 @@
         android:text="아이디"
         android:textSize="30dp" />
 
-
-
     <Button
         android:id="@+id/manager_func_button1"
         android:layout_width="318dp"

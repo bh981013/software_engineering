@@ -7,12 +7,25 @@
     tools:context=".Student_schedule">
 
     <Button
-        android:id="@+id/btn_schedule_check"
+        android:id="@+id/btn_schedule_look"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="16dp"
+        android:text="자세히"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_schedule_back"
+        app:layout_constraintStart_toEndOf="@+id/btn_schedule_add" />
+
+    <Button
+        android:id="@+id/btn_schedule_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
         android:layout_marginBottom="16dp"
-        android:text="확인"
+        android:text="추가"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -29,7 +42,7 @@
         android:scrollbarSize="5dp"
         android:scrollbarThumbVertical="@android:color/darker_gray"
         android:scrollbars="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btn_schedule_undo"
+        app:layout_constraintBottom_toTopOf="@+id/btn_schedule_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,12 +63,12 @@
         app:layout_constraintTop_toBottomOf="@+id/sch_month" />
 
     <Button
-        android:id="@+id/btn_schedule_undo"
+        android:id="@+id/btn_schedule_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="16dp"
-        android:text="취소"
+        android:text="뒤로"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

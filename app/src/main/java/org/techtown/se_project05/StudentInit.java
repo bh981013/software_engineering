@@ -39,5 +39,13 @@ public class StudentInit extends AppCompatActivity {
             }
         });
         btn_plan = findViewById(R.id.stud_init_button2);
+        btn_plan.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Student_schedule.class);
+                intent.putExtra("userID", userID);
+                intent.putExtra("classes", classes);
+                startActivity(intent);
+            }
+        });
     }
 }

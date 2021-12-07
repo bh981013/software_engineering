@@ -25,18 +25,18 @@ public class ManagerCheckAttendance extends AppCompatActivity {
         hashMap.put("present",presentProp);
 
         Property absentProp = new Property();
-        presentProp.layoutResource = R.layout.attendance_absent;
-        presentProp.dateTextViewResource = R.id.text1;
+        absentProp.layoutResource = R.layout.attendance_absent;
+        absentProp.dateTextViewResource = R.id.text1;
         hashMap.put("absent",absentProp);
 
         Property currentProp = new Property();
-        presentProp.layoutResource = R.layout.attendance_current;
-        presentProp.dateTextViewResource = R.id.text1;
+        currentProp.layoutResource = R.layout.attendance_current;
+        currentProp.dateTextViewResource = R.id.text1;
         hashMap.put("current",currentProp);
 
         Property defaultProp = new Property();
-        presentProp.layoutResource = R.layout.attendance_default;
-        presentProp.dateTextViewResource = R.id.text1;
+        defaultProp.layoutResource = R.layout.attendance_default;
+        defaultProp.dateTextViewResource = R.id.text1;
         hashMap.put("default",defaultProp);
 
         customCalendar.setMapDescToProp(hashMap);
@@ -46,7 +46,9 @@ public class ManagerCheckAttendance extends AppCompatActivity {
         dateMap.put(calendar.get(Calendar.DAY_OF_MONTH), "current");
 
         dateMap.put(2,"present");
-        dateMap.put(3,"absent");
+        dateMap.put(3,"present");
+        dateMap.put(1,"absent");
+        dateMap.put(4,"present");
 
         customCalendar.setDate(calendar, dateMap);
     }

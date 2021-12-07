@@ -11,7 +11,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 
 public class ManagerCheckAttendance extends AppCompatActivity {
-CustomCalendar customCalendar;
+    CustomCalendar customCalendar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

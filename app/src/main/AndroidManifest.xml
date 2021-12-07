@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SE_project05"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Student_schedule_add"
+            android:exported="false" />
+        <activity
             android:name=".Student_schedule"
             android:exported="false" />
         <activity
@@ -34,6 +37,8 @@
         <activity android:name=".ManagerDeleteClass" />
         <activity android:name=".ManagerAddBulletin" />
         <activity android:name=".ManagerCheckAttendance" />
+        <activity android:name=".StudentFunc"></activity>
+        <activity android:name=".StudentBulletin"></activity>
     </application>
 
 </manifest>

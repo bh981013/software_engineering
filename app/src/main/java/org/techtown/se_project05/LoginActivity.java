@@ -79,11 +79,11 @@ public class LoginActivity extends AppCompatActivity {
                             System.out.println(jsonArray);
                             if (jsonArray.length() != 0) {
                                 for (int i = 0; i < jsonArray.length(); i++) {
-                                    JSONArray arr = (JSONArray) jsonArray.get(i);
-                                    System.out.println("t1: "+ arr.get(0));
-                                    System.out.println("t2: "+ arr.get(1));
-                                    classes.add(arr.get(0).toString());
-                                    classesID.add(Integer.parseInt(arr.get(1).toString()));
+                                    JSONObject arr = (JSONObject)jsonArray.get(i);
+                                    System.out.println("t1: "+ arr.getString("lectureName"));
+                                    System.out.println("t2: "+ arr.getInt("lectureID"));
+                                    classes.add(arr.getString("lectureName"));
+                                    classesID.add(arr.getInt("lectureID"));
                                 }
                             }
 

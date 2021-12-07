@@ -19,8 +19,8 @@
             android:name=".StudentBulletin"
             android:exported="false" />
         <activity
-            android:name=".Student_schedule_add"></activity>
-        <activity
+            android:name=".Student_attendance"></activity>
+      <activity
             android:name=".Student_attendance_add"
             android:exported="false" />
         <activity
@@ -46,6 +46,9 @@
         <activity android:name=".ManagerAddBulletin" />
         <activity android:name=".ManagerCheckAttendance" />
         <activity android:name=".StudentFunc"></activity>
+        <activity android:name=".ManagerAttendance"></activity>
+        <activity android:name=".ManagerAttendanceTemp"></activity>
+        <activity android:name="Bull"></activity>
     </application>
 
 </manifest>

@@ -23,7 +23,7 @@ import org.json.JSONObject;
 import java.io.FileInputStream;
 import java.util.ArrayList;
 
-public class Student_attendance extends AppCompatActivity {
+public class ManagerAttendance extends AppCompatActivity {
 
     public String fname =null;
     public String str=null;
@@ -33,13 +33,13 @@ public class Student_attendance extends AppCompatActivity {
     public TextView contextEditText;
     private ArrayList<String> classes;
     private ArrayList<Integer> classesID;
-    private String curClass, userID;
+    private String curClass, userID, studentID;
     private int curClassID;
     private int attendance;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.calendar_student);
+        setContentView(R.layout.calendar2);
         RadioGroup rg = (RadioGroup)findViewById(R.id.radioGroup);
         rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -56,6 +56,7 @@ public class Student_attendance extends AppCompatActivity {
 
         Intent intent = getIntent();
         userID = intent.getStringExtra("userID");
+        studentID = intent.getStringExtra("studentID");
         classes = intent.getStringArrayListExtra("classes");
         classesID = intent.getIntegerArrayListExtra("classesID");
         curClass = intent.getStringExtra("curClass");
@@ -66,23 +67,23 @@ public class Student_attendance extends AppCompatActivity {
         cha_Btn=findViewById(R.id.cha_Btn);
         contextEditText=findViewById(R.id.contextEditText);
         //로그인 및 회원가입 엑티비티에서 이름을 받아옴
-        textView3.setText(userID+"의 출결표");
+        textView3.setText(studentID+"의 출결표");
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                checkDay(year,month,dayOfMonth,userID);
+                checkDay(year,month,dayOfMonth,studentID);
             }
         });
         cha_Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveDiary(userID, fname, attendance);
+                saveDiary(studentID, fname, attendance);
             }
         });
     }
 
-    public void  checkDay(int cYear,int cMonth,int cDay,String userID){
+    public void  checkDay(int cYear,int cMonth,int cDay,String studentID){
 
 
         fname=String.format("%d%d%d", cYear, cMonth, cDay);
@@ -121,14 +122,14 @@ public class Student_attendance extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         contextEditText.setText("");
-                        removeDiary(userID, fname);
+                        removeDiary(studentID, fname);
                     }
                 });
 
             }
         };
         String date = String.format("%d%d%d",cYear,cMonth,cDay);
-        AttendR attendR = new AttendR( userID, date, curClassID,responseListener );
+        AttendR attendR = new AttendR( studentID, date, curClassID,responseListener );
         RequestQueue queue = Volley.newRequestQueue( getApplicationContext() );
         queue.add( attendR );
 

@@ -50,7 +50,7 @@ public class ManagerFunc extends AppCompatActivity {
         });
         modify_calendar.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-                Intent intent= new Intent(getApplicationContext(), ManagerCheckAttendance.class);
+                Intent intent= new Intent(getApplicationContext(), ManagerAttendanceTemp.class);
                 intent.putExtra("userID", userID);
                 intent.putExtra("classes", classes);
                 intent.putExtra("classesID", classesID);
@@ -62,7 +62,7 @@ public class ManagerFunc extends AppCompatActivity {
 
         add_bulletin.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-                Intent intent= new Intent(getApplicationContext(), ManagerAddBulletin.class);
+                Intent intent= new Intent(getApplicationContext(), StudentBulletin.class);
                 intent.putExtra("userID", userID);
                 intent.putExtra("classes", classes);
                 intent.putExtra("classesID", classesID);

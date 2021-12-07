@@ -21,9 +21,7 @@ public class StudentInit extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView(R.layout.student_main);
 
-
         tv_id = findViewById(R.id.tv_id);
-
 
         Intent intent = getIntent();
         String userID = intent.getStringExtra("userID");

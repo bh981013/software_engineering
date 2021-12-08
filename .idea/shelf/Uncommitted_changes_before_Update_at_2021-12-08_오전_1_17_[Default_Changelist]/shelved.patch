@@ -1,0 +1,111 @@
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"org.techtown.se_project05\">\r\n\r\n    <uses-permission android:name=\"android.permission.INTERNET\" />\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.SE_project05\"\r\n        android:usesCleartextTraffic=\"true\">\r\n        <activity\r\n<<<<<<< Updated upstream\r\n            android:name=\".StudentBulletin_Detail\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".StudentBulletin\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".Student_schedule_add\"\r\n=======\r\n            android:name=\".Student_attendance_add\"\r\n>>>>>>> Stashed changes\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".Student_schedule\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".LoginActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n        <activity android:name=\".RegisterActivity\" />\r\n        <activity android:name=\".StudentInit\" />\r\n        <activity android:name=\".StudentClass\" />\r\n        <activity android:name=\".ManagerInit\" />\r\n        <activity android:name=\".ManagerAddClass\" />\r\n        <activity android:name=\".ManagerFunc\" />\r\n        <activity android:name=\".ManagerAddStudent\" />\r\n        <activity android:name=\".ManagerDeleteClass\" />\r\n        <activity android:name=\".ManagerAddBulletin\" />\r\n        <activity android:name=\".ManagerCheckAttendance\" />\r\n        <activity android:name=\".StudentFunc\"></activity>\r\n        <activity android:name=\".StudentBulletin\"></activity>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision 11644db73819d54fc0d89f460591cadbd7cfd290)
++++ b/app/src/main/AndroidManifest.xml	(date 1638893093449)
+@@ -13,17 +13,15 @@
+         android:theme="@style/Theme.SE_project05"
+         android:usesCleartextTraffic="true">
+         <activity
+-<<<<<<< Updated upstream
+             android:name=".StudentBulletin_Detail"
+             android:exported="false" />
+         <activity
+             android:name=".StudentBulletin"
+             android:exported="false" />
+         <activity
+-            android:name=".Student_schedule_add"
+-=======
++            android:name=".Student_schedule_add"></activity>
++    <activity
+             android:name=".Student_attendance_add"
+->>>>>>> Stashed changes
+             android:exported="false" />
+         <activity
+             android:name=".Student_schedule"
+@@ -48,7 +46,6 @@
+         <activity android:name=".ManagerAddBulletin" />
+         <activity android:name=".ManagerCheckAttendance" />
+         <activity android:name=".StudentFunc"></activity>
+-        <activity android:name=".StudentBulletin"></activity>
+     </application>
+ 
+ </manifest>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DesignSurface\">\r\n    <option name=\"filePathToZoomLevelMap\">\r\n      <map>\r\n<<<<<<< Updated upstream\r\n        <entry key=\"..\\:/SE_GIT/software_engineering/app/src/main/res/layout/student_bulletin.xml\" value=\"0.3380208333333333\" />\r\n        <entry key=\"..\\:/SE_GIT/software_engineering/app/src/main/res/layout/student_bulletin_detail.xml\" value=\"0.3380208333333333\" />\r\n=======\r\n        <entry key=\"..\\:/SE_GIT/software_engineering/app/src/main/res/layout/activity_login.xml\" value=\"0.3380208333333333\" />\r\n        <entry key=\"..\\:/SE_GIT/software_engineering/app/src/main/res/layout/student_attendance_add.xml\" value=\"0.3380208333333333\" />\r\n        <entry key=\"..\\:/SE_GIT/software_engineering/app/src/main/res/layout/student_class.xml\" value=\"0.3380208333333333\" />\r\n>>>>>>> Stashed changes\r\n        <entry key=\"..\\:/SE_GIT/software_engineering/app/src/main/res/layout/student_main.xml\" value=\"0.3380208333333333\" />\r\n        <entry key=\"..\\:/SE_GIT/software_engineering/app/src/main/res/layout/student_schedule.xml\" value=\"0.3380208333333333\" />\r\n        <entry key=\"..\\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/activity_login.xml\" value=\"0.3333333333333333\" />\r\n        <entry key=\"..\\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/activity_main.xml\" value=\"0.2977777777777778\" />\r\n        <entry key=\"..\\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/activity_register.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/calendar_header.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/manager_add_class.xml\" value=\"0.2977777777777778\" />\r\n        <entry key=\"..\\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/manager_main.xml\" value=\"0.2222222222222222\" />\r\n        <entry key=\"..\\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/student_attendance.xml\" value=\"0.4\" />\r\n        <entry key=\"..\\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/student_class.xml\" value=\"0.285140562248996\" />\r\n        <entry key=\"..\\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/student_initial.xml\" value=\"0.4\" />\r\n        <entry key=\"..\\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/student_main.xml\" value=\"0.21822916666666667\" />\r\n        <entry key=\"..\\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/test.xml\" value=\"0.4444444444444444\" />\r\n        <entry key=\"..\\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml\" value=\"0.21354166666666666\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/activity_register.xml\" value=\"0.2515625\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/attendance_absent.xml\" value=\"0.2515625\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/attendance_checkbox.xml\" value=\"0.75\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/attendance_current.xml\" value=\"0.2515625\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/attendance_default.xml\" value=\"0.2515625\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/attendance_present.xml\" value=\"0.25\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/calendar_header.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/manager_add_class.xml\" value=\"0.2515625\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/manager_add_student.xml\" value=\"0.25\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/manager_check_attendance.xml\" value=\"0.25\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/manager_class.xml\" value=\"0.2515625\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/manager_func.xml\" value=\"0.2515625\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/manager_main.xml\" value=\"0.2515625\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/manager_select_attendance.xml\" value=\"0.2515625\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/student_attendance.xml\" value=\"0.2515625\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/student_class.xml\" value=\"0.25\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/student_main.xml\" value=\"0.2515625\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/student_schedule.xml\" value=\"0.2515625\" />\r\n        <entry key=\"..\\:/android_git/software_engineering/app/src/main/res/layout/student_schedule_add.xml\" value=\"0.2046875\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"Android Studio default JDK\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 11644db73819d54fc0d89f460591cadbd7cfd290)
++++ b/.idea/misc.xml	(date 1638893598284)
+@@ -3,47 +3,30 @@
+   <component name="DesignSurface">
+     <option name="filePathToZoomLevelMap">
+       <map>
+-<<<<<<< Updated upstream
+-        <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/student_bulletin.xml" value="0.3380208333333333" />
+-        <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/student_bulletin_detail.xml" value="0.3380208333333333" />
+-=======
+-        <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/activity_login.xml" value="0.3380208333333333" />
+-        <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/student_attendance_add.xml" value="0.3380208333333333" />
+-        <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/student_class.xml" value="0.3380208333333333" />
+->>>>>>> Stashed changes
+-        <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/student_main.xml" value="0.3380208333333333" />
+-        <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/student_schedule.xml" value="0.3380208333333333" />
+         <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
+         <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/activity_main.xml" value="0.2977777777777778" />
+         <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/activity_register.xml" value="0.1" />
++        <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/attendance_absent.xml" value="0.298974358974359" />
++        <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/attendance_current.xml" value="0.298974358974359" />
++        <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/attendance_default.xml" value="0.298974358974359" />
++        <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/attendance_present.xml" value="0.298974358974359" />
+         <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/calendar_header.xml" value="0.1" />
+         <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/manager_add_class.xml" value="0.2977777777777778" />
++        <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/manager_add_student.xml" value="0.22875816993464052" />
++        <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/manager_check_attendance.xml" value="0.30364583333333334" />
++        <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/manager_func.xml" value="0.25539568345323743" />
+         <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/manager_main.xml" value="0.2222222222222222" />
+         <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/student_attendance.xml" value="0.4" />
+-        <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/student_class.xml" value="0.285140562248996" />
++        <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/student_bulletin.xml" value="0.2977777777777778" />
++        <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/student_bulletin_detail.xml" value="0.18697916666666667" />
++        <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/student_class.xml" value="0.24232081911262798" />
++        <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/student_func.xml" value="0.3333333333333333" />
+         <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/student_initial.xml" value="0.4" />
+-        <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/student_main.xml" value="0.21822916666666667" />
++        <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/student_main.xml" value="0.1" />
++        <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/student_schedule.xml" value="0.2977777777777778" />
++        <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/student_schedule_add.xml" value="0.18697916666666667" />
+         <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/layout/test.xml" value="0.4444444444444444" />
+         <entry key="..\:/Users/bhrya/AndroidStudioProjects/SE_project05/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.21354166666666666" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/activity_register.xml" value="0.2515625" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/attendance_absent.xml" value="0.2515625" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/attendance_checkbox.xml" value="0.75" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/attendance_current.xml" value="0.2515625" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/attendance_default.xml" value="0.2515625" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/attendance_present.xml" value="0.25" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/calendar_header.xml" value="0.1" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/manager_add_class.xml" value="0.2515625" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/manager_add_student.xml" value="0.25" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/manager_check_attendance.xml" value="0.25" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/manager_class.xml" value="0.2515625" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/manager_func.xml" value="0.2515625" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/manager_main.xml" value="0.2515625" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/manager_select_attendance.xml" value="0.2515625" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/student_attendance.xml" value="0.2515625" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/student_class.xml" value="0.25" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/student_main.xml" value="0.2515625" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/student_schedule.xml" value="0.2515625" />
+-        <entry key="..\:/android_git/software_engineering/app/src/main/res/layout/student_schedule_add.xml" value="0.2046875" />
+       </map>
+     </option>
+   </component>

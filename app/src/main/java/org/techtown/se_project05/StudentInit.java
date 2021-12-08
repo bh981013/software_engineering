@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class StudentInit extends AppCompatActivity {
 
     private TextView tv_id;
-    private Button btn_class, btn_plan;
+    private Button btn_class, btn_plan,btn_logout;
     private ArrayList<String> classes;
     private ArrayList<Integer> classesID;
     @Override
@@ -45,6 +45,14 @@ public class StudentInit extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), Student_schedule.class);
                 intent.putExtra("userID", userID);
                 intent.putExtra("classes", classes);
+                startActivity(intent);
+            }
+        });
+
+        btn_logout = findViewById(R.id.btn_logout);
+        btn_logout.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
             }
         });

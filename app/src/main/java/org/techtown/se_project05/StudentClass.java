@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class StudentClass extends AppCompatActivity {
     private TextView tv_id;
-    private Button btn_class1, btn_class2;
+    private Button btn_class1, btn_class2, btn_back;
     private ArrayList<String> classes;
     private ArrayList<Integer> classesID;
     LinearLayout linear1;
@@ -66,5 +66,14 @@ public class StudentClass extends AppCompatActivity {
             linear1.addView(btn);
         }
 
-        }
+        btn_back = findViewById(R.id.stu_class_back);
+        btn_back.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), StudentInit.class);
+                intent.putExtra("userID", userID);
+                startActivity(intent);
+            }
+        });
+
+    }
 }

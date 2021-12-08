@@ -52,7 +52,7 @@ public class Bull extends AppCompatActivity {
                 listView = (ListView) findViewById(R.id.listview); // 앞서 activity_main.xml에서 정의한 listview에 대하여 ListView 변수 정의
 
                 // ArrayAdapter를 통해 Android API platform의 'res' library에 simple_list_item_1.xml에 상응하는 형태로 위의 list를 listView에 반영
-                final ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
+                /*final ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
                 listView.setAdapter(mAdapter);
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() { // listView에 반영된 item을 Click할 경우 다음 동작을 수행
                     @Override
@@ -60,7 +60,7 @@ public class Bull extends AppCompatActivity {
                         final String item = (String) parent.getItemAtPosition(position); // 선택한 값을 String 문자열로 받아들여 Toast 출력
                         Toast.makeText(getApplicationContext(), item + " is selected!", Toast.LENGTH_SHORT).show();
                     }
-                });
+                });*/
             }
         };
     }

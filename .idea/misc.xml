@@ -5,12 +5,15 @@
       <map>
         <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/activity_list.xml" value="0.3380208333333333" />
         <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/activity_login.xml" value="0.3380208333333333" />
+        <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/manager_att_temp.xml" value="0.5149456521739131" />
         <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/manager_bulletin.xml" value="0.3380208333333333" />
+        <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/manager_func.xml" value="0.5149456521739131" />
         <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/student_attendance.xml" value="0.3380208333333333" />
         <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/student_attendance_add.xml" value="0.3380208333333333" />
         <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/student_bulletin.xml" value="0.3380208333333333" />
         <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/student_bulletin_detail.xml" value="0.3380208333333333" />
         <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/student_class.xml" value="0.3380208333333333" />
+        <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/student_func.xml" value="0.5149456521739131" />
         <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/student_main.xml" value="0.3380208333333333" />
         <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/student_schedule.xml" value="0.3380208333333333" />
         <entry key="..\:/SE_GIT/software_engineering/app/src/main/res/layout/student_schedule_add.xml" value="0.3380208333333333" />

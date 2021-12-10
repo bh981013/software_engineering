@@ -77,6 +77,14 @@ public class ManagerInit extends AppCompatActivity{
             }
 
         });
+
+        log_out = findViewById(R.id.stu_class_back);
+        log_out.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

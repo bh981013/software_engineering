@@ -55,6 +55,7 @@ public class ManagerFunc extends AppCompatActivity {
                 intent.putExtra("classes", classes);
                 intent.putExtra("classesID", classesID);
                 intent.putExtra("curClass", curClass);
+                intent.putExtra("curClassID", curClassID);
                 startActivity(intent);
 
             }
@@ -67,6 +68,7 @@ public class ManagerFunc extends AppCompatActivity {
                 intent.putExtra("classes", classes);
                 intent.putExtra("classesID", classesID);
                 intent.putExtra("curClass", curClass);
+                intent.putExtra("curClassID", curClassID);
                 startActivity(intent);
 
             }
@@ -79,6 +81,7 @@ public class ManagerFunc extends AppCompatActivity {
                 intent.putExtra("classes", classes);
                 intent.putExtra("classesID", classesID);
                 intent.putExtra("curClass", curClass);
+                intent.putExtra("curClassID", curClassID);
                 startActivity(intent);
 
             }
@@ -90,6 +93,7 @@ public class ManagerFunc extends AppCompatActivity {
                 intent.putExtra("classes", classes);
                 intent.putExtra("classesID", classesID);
                 intent.putExtra("curClass", curClass);
+                intent.putExtra("curClassID", curClassID);
                 startActivity(intent);
             }
         });

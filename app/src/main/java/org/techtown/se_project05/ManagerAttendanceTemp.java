@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,8 +43,12 @@ public class ManagerAttendanceTemp extends AppCompatActivity {
         classes = intent.getStringArrayListExtra("classes");
         classesID = intent.getIntegerArrayListExtra("classesID");
         curClass = intent.getStringExtra("curClass");
-        curClassID = intent.getIntExtra("curClassID", 1);
+        curClassID = intent.getIntExtra("curClassID", 2);
+        System.out.println("curClassID2" + curClassID);
+
         Button checkStudent = findViewById(R.id.check_student);
+        TextView className = findViewById(R.id.tv_id);
+        className.setText(curClass);
         Button back = findViewById(R.id.back);
         EditText et_stud_id = findViewById(R.id.new_stud_id);
 

@@ -68,7 +68,7 @@ public class ManagerAttendance extends AppCompatActivity {
         contextEditText=findViewById(R.id.contextEditText);
         //로그인 및 회원가입 엑티비티에서 이름을 받아옴
         textView3.setText(studentID+"의 출결표");
-
+        System.out.println("CurClassID" + curClassID);
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {

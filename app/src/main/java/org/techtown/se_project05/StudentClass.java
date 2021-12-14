@@ -71,6 +71,8 @@ public class StudentClass extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), StudentInit.class);
                 intent.putExtra("userID", userID);
+                intent.putExtra("classes", classes);
+                intent.putExtra("classesID", classesID);
                 startActivity(intent);
             }
         });

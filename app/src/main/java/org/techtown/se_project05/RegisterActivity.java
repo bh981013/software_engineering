@@ -41,6 +41,11 @@ public class RegisterActivity extends AppCompatActivity{
             public void onClick(View view) {
                 String userID = et_id.getText().toString();
                 String userPass = et_pass.getText().toString();
+                if(userID.length() >= 10 || userPass.length()>=10){
+                    Toast.makeText( getApplicationContext(), "ID/PW는 10자리 이하여야 합니다.", Toast.LENGTH_SHORT ).show();
+                    return;
+                }
+
                 int userType = 1;
                 switch(radioGroup.getCheckedRadioButtonId()) {
                     case R.id.radioButton4:
@@ -51,9 +56,10 @@ public class RegisterActivity extends AppCompatActivity{
                     public void onResponse(String response) {
 
                         try {
+                            System.out.println(response);
+
                             JSONObject jsonObject = new JSONObject( response );
                             boolean success = jsonObject.getBoolean( "success" );
-
                             //회원가입 성공시
                             if(success) {
 
@@ -63,7 +69,7 @@ public class RegisterActivity extends AppCompatActivity{
 
                                 //회원가입 실패시
                             } else {
-                                Toast.makeText( getApplicationContext(), "실패", Toast.LENGTH_SHORT ).show();
+                                Toast.makeText( getApplicationContext(), "중복된 ID입니다.", Toast.LENGTH_SHORT ).show();
                                 return;
                             }
 

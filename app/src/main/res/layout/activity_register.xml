@@ -40,6 +40,13 @@
             android:textColorHint="@color/input_register_hint" />
 
 
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:text="*ID/PW는 10자 이내여야 합니다." />
+
         <RadioGroup
             android:id="@+id/radioGroup2"
             android:layout_width="match_parent"
